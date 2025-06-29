@@ -422,17 +422,17 @@ const [showViewModal, setShowViewModal] = useState(false);
              <tr>
               <td className="border px-3 py-2">2025-06-25</td>
               <td className="border px-3 py-2">Deposit</td>
-              <td className="border px-3 py-2">$1,000,000.00</td>
+              <td className="border px-3 py-2"> {new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(userAmount)}</td>
               <td className="border px-3 py-2">Success</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p className="text-xs text-gray-500 text-center">
-        This dashboard reflects the most current status of your winnings under the Camellia K Talachi Mega Bonus Program.<br />
-        Your deposit has been securely processed by CKT National Reserve. If you have any questions or would like to request a payout, please contact your claim specialist directly.
-      </p>
+     
     </div>
   </div>
 )}
